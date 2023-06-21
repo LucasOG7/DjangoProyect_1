@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quienes Somos | PetAccesories</title>
+  {% load bootstrap5 %}
+  {% load static %}
+  {% bootstrap_css%}  
+  {% bootstrap_javascript%}
+  <script src="https://kit.fontawesome.com/9506ba593f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/QuienesSomos.css'%}">
+</head>
+
+<body>
+
+    <!-- Barra de navegacion -->
+    <div class="container-fluid">
+      <nav id="barra-nav" class="navbar navbar-expand-lg navbar-dark bg-dark row role">
+        <div class="navbar-brand col-4 nav justify-content-center" id="Logo-head">
+          <a href="{% url 'Pag_pcpal' %}"><img src="{% static 'img/Logo-barra.png' %}"
+              alt="Logo" width="60" height="60"></a>
+          <a class="navbar-brand" id="Nombrebarra" href="{% url 'Pag_pcpal' %}"><span id="Pet">Pet</span>Accesories</a>
+        </div>
+        <div class="collapse navbar-collapse col-4" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Productos' %}">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'QuienesSomos' %}">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contactanos.html">Contáctanos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Seguimiento de tu pedido</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-4">
+          <ul class="navbar-nav nav justify-content-end">
+            <li class="nav-item mr-2">
+              <a class="nav-link btn btn-primary" href="{% url 'Registro' %}">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-primary" href="{% url 'IniciarSesion' %}">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
+              <a href=""><img src="{% static 'img/Carrito.png' %}" alt="Carrito"
+                  height="40px" width="40px"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  <!-- Cuerpo de la web -->
+
+  <div class="Nosotros">
+    <div class="contenedor">
+      <div class="titulo">
+        <h1>Sobre Nosotros</h1>
+      </div>
+      <div class="contenido">
+        <div class="texto"></div>
+        <h2>Nuestra Historia</h2>
+        <p>Un grupo de amigas comenzó a realizar la venta de productos para mascotas como bandanas, correas e
+          identificadores, todo esto para ayudar a una fundación sin fines de lucro, decidimos partir a través de las
+          redes sociales, pero en la actualidad es casi imposible dar a basto a la demanda a través de las redes
+          sociales. Es por eso que les brindamos esta página con el fin de que puedan darle un gusto a su peludo, o
+          mejor aún, que tengan la oportunidad de que puedan adoptar uno para sus hogares y así poder darles el amor y
+          cuidado que tanto anhelan de una familia.</p>
+
+        <div class="boton">
+          <a href="#" type="button">Leer Más</a>
+        </div>
+      </div>
+
+      <div class="imagen">
+        <img src="{% static 'img/ONG perros.png' %}">
+      </div>
+    </div>
+
+
+
+    {% comment %} <!-- FOOTER -->
+    <div class="container-footer">
+      <footer class="bg-default text-light py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Contacto</h4>
+              <p>
+                Dirección: Av PetCity 6876<br />
+                Ciudad: Santiago, Chile<br />
+                Teléfono: (+56)954234678<br />
+                Correo electrónico: PetAccessories@contacto.cl
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h4>Enlaces de interés</h4>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'Pag_pcpal' %}">Inicio</a></li>
+                <li><a href="{% url 'Productos' %}">Productos</a></li>
+                <li><a href="{% url 'Registro' %}">Registro</a></li>
+                <li><a href="{% url 'IniciarSesion' %}">Iniciar sesión</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Síguenos en redes sociales:</h4>
+              <div class="box">
+                <div class="redSocial">
+                  <a href="#" class="fa fa-facebook" target="_blank"></a>
+                  <a href="#" class="fa fa-twitter" target="_blank"></a>
+                  <a href="#" class="fa fa-instagram" target="_blank"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="Derechos">
+      <small>&copy;  2023 &nbsp <b>PetAccesories</b> &nbsp Todos los Derechos Reservados.</small>
+    </div>
+    </footer> {% endcomment %}
+</body>
+</html>

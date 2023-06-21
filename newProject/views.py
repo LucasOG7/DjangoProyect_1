@@ -25,3 +25,18 @@ def IniciarSesion(request):
 def Registro(request):
     context = {}
     return render(request, "pages/Registro.html", context)
+
+
+def Pag_pcpal(request):
+    context = {}
+    return render(request, "pages/Pag_pcpal.html", context)
+
+
+def Productos(request):
+    context = {}
+    return render(request, "pages/Productos.html", context)
+
+
+def QuienesSomos(request):
+    context = {}
+    return render(request, "pages/QuienesSomos.html", context)
