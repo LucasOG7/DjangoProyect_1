@@ -119,7 +119,7 @@ body{
 }
 
 .card p{
-    text-align: center;
+  text-align: center;
 }
 
 .card {
@@ -263,7 +263,13 @@ body{
     margin-bottom: 20px;
   }
 
-  
+  .card-body{
+    height: 50px;
+  }
+
+  .card-img-top{
+    height: 250px;
+  }
 
 }
 
@@ -271,6 +277,11 @@ body{
   .navbar {
     display: flex;
     justify-content: space-around;
+  }
+
+  .card-text{
+    justify-content: center;
+    font-size: 10px;
   }
 
 }

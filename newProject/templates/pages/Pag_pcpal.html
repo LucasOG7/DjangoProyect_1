@@ -7,8 +7,8 @@
   <title>Tienda de mascotas</title>
   {% load bootstrap5 %}
   {% load static %}
-  {% bootstrap_css%}  
-  {% bootstrap_javascript%}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
   <script src="https://kit.fontawesome.com/9506ba593f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'css/pag_pcpal.css' %}">
 </head>
@@ -17,8 +17,8 @@
   <div class="container-fluid">
     <nav id="barra-nav" class="navbar navbar-expand-lg navbar-dark bg-dark row role">
       <div class="navbar-brand col-4 nav justify-content-center" id="Logo-head">
-        <a href="{% url 'Pag_pcpal' %}"><img src="{% static 'img/Logo-barra.png' %}"
-            alt="Logo" width="60" height="60"></a>
+        <a href="{% url 'Pag_pcpal' %}"><img src="{% static 'img/Logo-barra.png' %}" alt="Logo" width="60"
+            height="60"></a>
         <a class="navbar-brand" id="Nombrebarra" href="{% url 'Pag_pcpal' %}"><span id="Pet">Pet</span>Accesories</a>
       </div>
       <div class="collapse navbar-collapse col-4" id="navbarNav">
@@ -40,7 +40,7 @@
           </li>
         </ul>
       </div>
-      
+
       <div class="col-4">
         <ul class="navbar-nav nav justify-content-end">
           <li class="nav-item mr-2">
@@ -50,8 +50,7 @@
             <a class="nav-link btn btn-outline-primary" href="{% url 'IniciarSesion' %}">Iniciar sesión</a>
           </li>
           <li class="nav-item">
-            <a href=""><img src="{% static 'img/Carrito.png' %}" alt="Carrito"
-                height="40px" width="40px"></a>
+            <a href=""><img src="{% static 'img/Carrito.png' %}" alt="Carrito" height="40px" width="40px"></a>
           </li>
         </ul>
       </div>
@@ -124,23 +123,27 @@
               <img src="{% static 'img/Collar-Perro.webp' %}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">COLLARES</h5>
-                <p class="card-text">Encuentra el collar adecuado para tu mascota, contamos con diferentes talles y colores.</p>
+                <p class="card-text">Encuentra el collar adecuado para tu mascota, contamos con diferentes talles y
+                  colores.</p>
                 <a href="{% url 'Productos' %}" class="btn btn-primary">Sección Productos</a>
               </div>
             </div>
             <div class="card">
-              <img src="{% static 'img/Guia-comida-perros.png' %}" class="card-img-top" alt="...">
+              <img src="{% static 'img/Guia-comida-perros.png' %}" class="card-img-top" alt="..." height="300px">
               <div class="card-body">
                 <h5 class="card-title">GUÍA RACIONES DE COMIDA</h5>
-                <p class="card-text">Aquí te mostramos la ración ideal de comida para tu peludo según su tamaño y peso.</p>
-                <a href="https://www.rover.com/es/blog/cuanto-debe-comer-un-perro-al-dia/#:~:text=Si%20sigues%20sin%20saber%20muy%20bien%20qu%C3%A9%20hacer%2C,5%20kilos%20a%20partir%20de%20los%2045%20kilos" class="btn btn-primary" target="_blank">Más Información</a>
+                <p class="card-text">Aquí te mostramos la ración ideal de comida para tu peludo según su tamaño y peso.
+                </p>
+                <a href="https://www.rover.com/es/blog/cuanto-debe-comer-un-perro-al-dia/#:~:text=Si%20sigues%20sin%20saber%20muy%20bien%20qu%C3%A9%20hacer%2C,5%20kilos%20a%20partir%20de%20los%2045%20kilos"
+                  class="btn btn-primary" target="_blank">Más Información</a>
               </div>
             </div>
             <div class="card">
               <img src="{% static 'img/IDENTIFICADOR-PERRO.jpg' %}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">IDENTIFICADORES</h5>
-                <p class="card-text">Encuentra el identificador ideal para tu mejor amigo y garantizar su seguridad al máximo.</p>
+                <p class="card-text">Encuentra el identificador ideal para tu mejor amigo y garantizar su seguridad al
+                  máximo.</p>
                 <a href="{% url 'Productos' %}" class="btn btn-primary">Sección Productos</a>
               </div>
             </div>
@@ -149,26 +152,32 @@
         <div class="carousel-item">
           <div class="card-wrapper">
             <div class="card">
-              <img src="https://jumbo.vtexassets.com/arquivos/ids/370117/Alimento-perro-cachorro-carne-pollo-y-leche-3-kg.jpg?v=637420090702870000" class="card-img-top" alt="...">
+              <img
+                src="https://jumbo.vtexassets.com/arquivos/ids/370117/Alimento-perro-cachorro-carne-pollo-y-leche-3-kg.jpg?v=637420090702870000"
+                class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">ALIMENTO PARA PERROS</h5>
-                <p class="card-text">El mejor alimento lo encontraras aquí, encontraras todo tipo de alimento y elige según tu preferencia.</p>
+                <p class="card-text">El mejor alimento lo encontraras aquí, encontraras todo tipo de alimento y elige
+                  según tu preferencia.</p>
                 <a href="{% url 'Productos' %}" class="btn btn-primary">Sección Productos</a>
               </div>
             </div>
             <div class="card">
-              <img src="https://sangreverdechile.com/wp-content/uploads/2021/01/Bandana.png" class="card-img-top" alt="...">
+              <img src="https://sangreverdechile.com/wp-content/uploads/2021/01/Bandana.png" class="card-img-top"
+                alt="...">
               <div class="card-body">
                 <h5 class="card-title">BANDANAS</h5>
-                <p class="card-text">Dale el estilazo ideal a tu mascota para que resalte entre los demas peludos y se robe todas las miradas.</p>
+                <p class="card-text">Dale el estilazo ideal a tu mascota para que resalte entre los demas peludos y se
+                  robe todas las miradas.</p>
                 <a href="{% url 'Productos' %}" class="btn btn-primary">Sección Productos</a>
               </div>
             </div>
             <div class="card">
-              <img src="{% static 'img/Comida-gato.jfif'%}" class="card-img-top" alt="...">
+              <img src="{% static 'img/Comida-gato.jfif'%}" class="card-img-top" alt="..." height="300px">
               <div class="card-body">
                 <h5 class="card-title">ALIMENTO PARA GATOS</h5>
-                <p class="card-text">Aquí encontraras lo mejor en alimento para tus gatitos ricos en proteínas para su salud y bienestar del día a día.</p>
+                <p class="card-text">Aquí encontraras lo mejor en alimento para tus gatitos ricos en proteínas para su
+                  salud y bienestar del día a día.</p>
                 <a href="{% url 'Productos' %}" class="btn btn-primary">Sección Productos</a>
               </div>
             </div>
@@ -180,8 +189,10 @@
               <img src="{% static 'img/guia-medidas-ropa-perros.png'%}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">MEDIDAS ROPA PARA PERRO</h5>
-                <p class="card-text">Elige la medida ideal de ropa para tu perro. Recomendamos tomar estas medidas antes de comprar para evitar devoluciones.</p>
-                <a href="https://blog.petco.cl/como-escojo-la-talla-adecuada-de-ropa-para-mi-mascota/" class="btn btn-primary" target="_blank">Más Información</a>
+                <p class="card-text">Elige la medida ideal de ropa para tu perro. Recomendamos tomar estas medidas antes
+                  de comprar para evitar devoluciones.</p>
+                <a href="https://blog.petco.cl/como-escojo-la-talla-adecuada-de-ropa-para-mi-mascota/"
+                  class="btn btn-primary" target="_blank">Más Información</a>
               </div>
             </div>
             <div class="card">
@@ -196,18 +207,22 @@
               <img src="{% static 'img/guia-medidas-ropa-gatos.jpg'%}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">MEDIDAS ROPA PARA GATOS</h5>
-                <p class="card-text">Elige la medida ideal de ropa para tu gato. Recomendamos tomar estas medidas antes de comprar para evitar devoluciones.</p>
-                <a href="https://blog.petco.cl/como-escojo-la-talla-adecuada-de-ropa-para-mi-mascota/" class="btn btn-primary" target="_blank">Más Información</a>
+                <p class="card-text">Elige la medida ideal de ropa para tu gato. Recomendamos tomar estas medidas antes
+                  de comprar para evitar devoluciones.</p>
+                <a href="https://blog.petco.cl/como-escojo-la-talla-adecuada-de-ropa-para-mi-mascota/"
+                  class="btn btn-primary" target="_blank">Más Información</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev btn-productos-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <button class="carousel-control-prev btn-productos-prev" type="button" data-bs-target="#carouselExample"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next btn-productos-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <button class="carousel-control-next btn-productos-next" type="button" data-bs-target="#carouselExample"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -215,49 +230,52 @@
   </div>
 
 
-    <!-- Footer -->
-<div class="container-footer">
-  <footer class="bg-default text-light py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h4>Contacto</h4>
-          <p>
-            Dirección: Av PetCity 6876<br />
-            Ciudad: Santiago, Chile<br />
-            Teléfono: (+56)954234678<br />
-            Correo electrónico: PetAccessories@contacto.cl
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h4>Enlaces de interés</h4>
-          <ul class="list-unstyled">
-            <li><a href="{% url 'Pag_pcpal' %}">Inicio</a></li>
-            <li><a href="{% url 'Productos' %}">Productos</a></li>
-            <li><a href="{% url 'Registro' %}">Registro</a></li>
-            <li><a href="{% url 'IniciarSesion' %}">Iniciar sesión</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h4>Síguenos en redes sociales</h4>
-          <div class="box">
-            <div class="redSocial">
-              <a href="#" class="fa fa-facebook" target="_blank"></a>
-              <a href="#" class="fa fa-twitter" target="_blank"></a>
-              <a href="#" class="fa fa-instagram" target="_blank"></a>
+  <!-- Footer -->
+  <div class="container-footer">
+    <footer class="bg-default text-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Contacto</h4>
+            <p>
+              Dirección: Av PetCity 6876<br />
+              Ciudad: Santiago, Chile<br />
+              Teléfono: (+56)954234678<br />
+              Correo electrónico: PetAccessories@contacto.cl
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4>Enlaces de interés</h4>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'Pag_pcpal' %}">Inicio</a></li>
+              <li><a href="{% url 'Productos' %}">Productos</a></li>
+              <li><a href="{% url 'Registro' %}">Registro</a></li>
+              <li><a href="{% url 'IniciarSesion' %}">Iniciar sesión</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Síguenos en redes sociales</h4>
+            <div class="box">
+              <div class="redSocial">
+                <a href="#" class="fa fa-facebook" target="_blank"></a>
+                <a href="#" class="fa fa-twitter" target="_blank"></a>
+                <a href="#" class="fa fa-instagram" target="_blank"></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-</div>
+  </div>
 
-<div class="Derechos">
-  <small>&copy;  2023 &nbsp <b>PetAccesories</b> &nbsp Todos los Derechos Reservados.</small>
-</div>
-</footer>
+  <div class="Derechos">
+    <small>&copy; 2023 &nbsp <b>PetAccesories</b> &nbsp Todos los Derechos Reservados.</small>
+  </div>
+  </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
