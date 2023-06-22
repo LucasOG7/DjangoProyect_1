@@ -40,3 +40,8 @@ def Productos(request):
 def QuienesSomos(request):
     context = {}
     return render(request, "pages/QuienesSomos.html", context)
+
+
+def Contactanos(request):
+    context = {}
+    return render(request, "pages/Contactanos.html", context)

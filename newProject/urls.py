@@ -7,4 +7,5 @@ urlpatterns = [
     path("Pag_pcpal", views.Pag_pcpal, name="Pag_pcpal"),
     path("Productos", views.Productos, name="Productos"),
     path("QuienesSomos", views.QuienesSomos, name="QuienesSomos"),
+    path("Contactanos", views.Contactanos, name="Contactanos"),
 ]
