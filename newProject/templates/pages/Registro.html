@@ -13,9 +13,10 @@
     <div class="container">
       <form
         method="POST"
-        action="http://localhost:3000/usuarios"
+        action=""
         id="formulario"
       >
+      {% csrf_token %}
         <h1>Registro de usuario</h1>
         <div class="mb-3">
           <label for="correo" class="form-label">Correo electrónico:</label>
@@ -49,36 +50,23 @@
             required
           />
         </div>
+        
 
-        <select name="regiones" id="regiones" onchange="cargar_region()">
-          <option value="">Seleccione una region</option>
-        </select>
-
-        <select name="comunas" id="comunas" onchange="">
-          
-          <option value="">Seleccione un comuna</option>
-        </select>
+        
 
         <div class="mb-3">
-          <label for="regiones" class="form-label">Región:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="regiones"
-            name="regiones"
-            required
-          />
+          <label for="regiones" class="form-label">Region</label>
+          <select name="regiones" id="regiones" onchange="cargar_region()" class="form-control">
+            <option value="">Seleccione una region</option>
+          </select>
         </div>
 
         <div class="mb-3">
-          <label for="comuna" class="form-label">Comuna:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="comuna"
-            name="comuna"
-            required
-          />
+          <label for="comunas" class="form-label">Comunas</label>
+          <select name="comunas" id="comunas" onchange="" class="form-control">
+            
+            <option value="">Seleccione un comuna</option>
+          </select>
         </div>
 
         <div class="mb-3">
@@ -110,8 +98,9 @@
 
       </form>
     </div>
-    <script src="/js/app.js"></script>
-    <script src="/js/crud.js"> </script>
-    <script src="/js/function.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>  
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/function.js' %}"></script>
   </body>
 </html>

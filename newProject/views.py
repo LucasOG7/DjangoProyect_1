@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Usuario, tipoUsuario
+from .models import Usuario, tipoUsuario, Cliente
 from .forms import UsuarioForm, tipoForm
 
 # Create your views here.
@@ -23,8 +23,33 @@ def IniciarSesion(request):
 
 
 def Registro(request):
-    context = {}
-    return render(request, "pages/Registro.html", context)
+    if request.method != "POST":
+        cliente = Cliente.objects.all()
+        context = {"cliente":cliente}
+        return render(request, "pages/Registro.html", context)
+    else:
+        correo = request.POST["correo"]
+        nombre = request.POST["nombre"]
+        apellidos = request.POST["apellido"]
+        region = request.POST["regiones"]
+        comuna = request.POST["comunas"]
+        direccion = request.POST["direccion"]
+        contraseña = request.POST["password"]
+    
+    objCliente = Cliente.objects.create(
+        correo = correo,
+        nombre = nombre,
+        apellidos = apellidos,
+        region = region,
+        comuna = comuna,
+        direccion = direccion,
+        contraseña = contraseña,
+    )
+    objCliente.save()
+    print("Agregado con exito")
+    print(objCliente)
+    context = {"mensaje": "OK Registrado Correctamente"}
+    return render(request, "pages/Pag_pcpal.html", context)    
 
 
 def Pag_pcpal(request):
@@ -50,3 +75,4 @@ def Contactanos(request):
 def CarritoDeCompra(request):
     context = {}
     return render(request, "pages/CarritoDeCompra.html", context)
+
