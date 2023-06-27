@@ -45,3 +45,8 @@ def QuienesSomos(request):
 def Contactanos(request):
     context = {}
     return render(request, "pages/Contactanos.html", context)
+
+
+def CarritoDeCompra(request):
+    context = {}
+    return render(request, "pages/CarritoDeCompra.html", context)

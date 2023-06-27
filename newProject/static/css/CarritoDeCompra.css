@@ -1,0 +1,12 @@
+body{
+    background-image: url(../img/FondoCarrito.jpg);
+}
+
+.card{
+    width: 100%;
+    justify-content: center;
+}
+
+.table .table-primary{
+    text-align: center;
+}

@@ -1,0 +1,1 @@
+var MontoTotal = document.querySelectorAll(".MontoTotal");
