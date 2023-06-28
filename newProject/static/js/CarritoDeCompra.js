@@ -1,38 +1,30 @@
-var MontoTotal = document.querySelectorAll(".MontoTotal");
-var MontoPorProducto = document.querySelectorAll("input[name=txtPrecio]");
-var TotalProducto = document.querySelector(".CantidadTotal");
-var ContarItemPorProd = document.querySelectorAll("input[name=Producto]");
+const openBtn = document.getElementById('open_cart_btn')
+const cart = document.getElementById('sidecart')
+const closeBtn = document.getElementById('close_btn')
+const backdrop = document.querySelector('.backdrop')
 
-
-document.querySelectorAll(".fas fa-plus").forEach(Producto =>{
-
-    Producto.addEventListener("click",function(){
-        SumarProducto(Producto)
-    })
-})
+openBtn.addEventListener('click', openCart)
+closeBtn.addEventListener('click', closeCart)
+backdrop.addEventListener('click', closeCart)
 
 
 
-function SumarProducto(Producto){
-    var closetTr = Producto.closest("td").parentNode;
-    var closestPrecio = closetTr.cells[2].querySelector("input[name=txtPrecio]").value;
-    var closestMontoTotal = closetTr.cells[2].querySelector("input[name=TotaltxtPrecio]");
+// Open Cart
+function openCart() {
+    cart.classList.add('open')
+    backdrop.style.display = 'block'
 
-    var itemCount = Producto.closest("td").querySelector("input[name=Producto]");
-
-    itemCount.value = parseFloat(itemCount.value) + 1;
-    closestMontoTotal.value = parseFloat(closestPrecio) * parseFloat(itemCount.value);
-
-
-    var MontoTotalTemp = 0;
-
-    MontoPorProducto.forEach(Producto =>{
-        MontoTotalTemp = MontoTotalTemp * parseFloat(Producto.value)
-    })
-
-    MontoTotal.forEach(Producto =>{
-        Producto.innerHTML = MontoTotalTemp;
-    })
+    setTimeout(() => {
+        backdrop.classList.add('show')
+    }, 0)
 }
 
+// close Cart
+function closeCart() {
+    cart.classList.remove('open')
+    backdrop.classList.remove('show')
 
+    setTimeout(() => {
+        backdrop.style.display = 'none'
+    }, 500)
+}

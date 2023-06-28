@@ -19,7 +19,7 @@ def IniciarSesion(request):
         return render(request, "pages/IniciarSesion.html", context)
     else:
         username = request.POST["username"]
-        password = request.PSOT["password"]
+        password = request.POST["password"]
 
 
 def Registro(request):
@@ -70,9 +70,4 @@ def QuienesSomos(request):
 def Contactanos(request):
     context = {}
     return render(request, "pages/Contactanos.html", context)
-
-
-def CarritoDeCompra(request):
-    context = {}
-    return render(request, "pages/CarritoDeCompra.html", context)
 
