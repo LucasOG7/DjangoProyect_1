@@ -91,7 +91,7 @@
 
         <div class="Productos">
 
-            <div class="producto" data-category="PERROS">
+            <!-- <div class="producto" data-category="PERROS">
 
                 <div class="ctn-img">
                     <img src="{% static 'img/Collar-Perro.webp' %}">
@@ -134,9 +134,9 @@
             <div class="producto" data-category="CORREAS">
 
                 <div class="ctn-img">
-                    <img src="{% static 'img/Collar-Perro.webp' %}">
+                    <img src="{% static 'img/Correa-Perro.jfif' %}">
                 </div>
-                <h2>COLLAR PARA PERROS</h2>
+                <h2>CORREA PARA PERROS</h2>
                 <span>$ 3.990</span>
                 <a href="#"><button>Agregar al carrito</button></a>
 
@@ -144,7 +144,7 @@
 
             <div class="producto" data-category="BANDANAS">
 
-                <div class="ctn-img"><img src="https://sangreverdechile.com/wp-content/uploads/2021/01/Bandana.png" alt=""></div>
+                <div class="ctn-img"><img src="{% static 'img/Bandanas.png' %}" alt=""></div>
                 <h2>BANDANAS</h2>
                 <span>$ 1.990</span>
                 <a href="#"><button>Agregar al carrito</button></a>
@@ -168,7 +168,7 @@
                 <span>$ 4.990</span>
                 <a href="#"><button>Agregar al carrito</button></a>
 
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -181,7 +181,7 @@
       <div class="cart_content">
         <!-- Cart Header -->
         <div class="cart_header">
-          <img src="{% static 'img/CarritoProductos.png' %}" style="width: 25px;" />
+          <img src="{% static 'img/CarritoProductos.png' %}" style="width: 25px;"/>
           <div class="header_title">
             <h4>Tus Productos</h4>
             <span id="items_num">4</span>
@@ -196,7 +196,7 @@
               <span>&times;</span>
             </div>
             <div class="item_img">
-              <img src="{% static 'img/Comida-perro.jfif'%}">
+              <img src="{% static 'img/Comida-perro.jfif'%}" data-image="{{ STATIC_URL }}img/Comida">
             </div>
             <div class="item_details">
               <p>Comida para perros</p>
