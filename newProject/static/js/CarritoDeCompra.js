@@ -4,7 +4,7 @@ const ITEMS = [
         id: 1,
         name: 'Comida para perros (Champion Dog)',
         price: 8.990,
-        image: 'img/Comida-perro.jfif',
+        image: "{% static 'img/Comida-perro.jfif' %}",
         qty: 1,
     },
 
@@ -28,7 +28,7 @@ const ITEMS = [
         id: 4,
         name: 'Rascador para gatos',
         price: 29.990,
-        image: 'static/img/Rascador-Gatos.webp',
+        image: "{% static 'img/Rascador-Gatos.webp'%}",
         qty: 1,
     },
 

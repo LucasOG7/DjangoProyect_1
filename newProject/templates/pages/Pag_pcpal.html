@@ -11,6 +11,7 @@
   {% bootstrap_javascript %}
   <script src="https://kit.fontawesome.com/9506ba593f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'css/pag_pcpal.css' %}">
+  <script src="{% static 'js/Pag_pcpal.js'%}"></script>
 </head>
 
 <body>
@@ -49,10 +50,34 @@
           <li class="nav-item">
             <a class="nav-link btn btn-outline-primary" href="{% url 'IniciarSesion' %}">Iniciar sesión</a>
           </li>
-          <!-- <li class="nav-item">
-            <a href="#"><img src="{% static 'img/Carrito.png' %}" height="40px" width="40px"></a>
-        </ul> -->
       </div>
+
+
+      <!-- Menú para dispositivos móviles -->
+  <div id="mobileMenu" class="mobileMenu">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNavbar" aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fas fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mobileNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Productos' %}">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'QuienesSomos' %}">Quienes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Contactanos' %}">Contáctanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Seguimiento de tu pedido</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary" href="{% url 'Registro' %}">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary" href="{% url 'IniciarSesion' %}">IniciarSesion</a>
+        </li>
     </nav>
   </div>
 
@@ -225,6 +250,21 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+    </div>
+  </div>
+
+
+  <!-- Formulario Suscripcion -->
+
+  <div class="suscripcion-container">
+    <div class="sub-container">
+      <h2>!Suscríbete a nuestro boletín¡</h2>
+      <p>y obtén un 5% de descuento en las próximas compras</p>
+
+      <form class="suscripcion-form">
+        <input type="email" class="email" placeholder="Ingresa tu correo electrónico">
+        <button class="btn-sub">Suscribirse</button>
+      </form>
     </div>
   </div>
 
