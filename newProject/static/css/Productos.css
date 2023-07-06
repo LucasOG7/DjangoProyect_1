@@ -1,49 +1,80 @@
 /* HEAD */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0;
-    background-image: radial-gradient(circle at 85.98% 14.02%, #002f3a 0, #002f3d 6.25%, #002e3f 12.5%, #002e41 18.75%, #002d43 25%, #002c44 31.25%, #002b45 37.5%, #0b2a45 43.75%, #142945 50%, #1b2844 56.25%, #222743 62.5%, #272542 68.75%, #2c2440 75%, #31223e 81.25%, #35213c 87.5%, #382039 93.75%, #3b1f36 100%);
-    padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0;
+  background-image: radial-gradient(circle at 85.98% 14.02%, #002f3a 0, #002f3d 6.25%, #002e3f 12.5%, #002e41 18.75%, #002d43 25%, #002c44 31.25%, #002b45 37.5%, #0b2a45 43.75%, #142945 50%, #1b2844 56.25%, #222743 62.5%, #272542 68.75%, #2c2440 75%, #31223e 81.25%, #35213c 87.5%, #382039 93.75%, #3b1f36 100%);
+  padding: 15px;
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around !important;
+}
+
+.nav-izq {
+  display: flex;
+  justify-content: baseline;
+  justify-self: flex-start !important;
+}
+
+.nav-link{
+  color: whitesmoke;
+}
+
+.nav-der {
+  display: flex;
+  align-items: baseline;
+}
+
+
+#Nombrebarra {
+  color: rgb(129, 98, 61);
+  margin-left: 0%;
+}
+
+#Pet {
+  color: #5B4C65 ;
+
+}
+
+.d-block{
+  height: auto !important;
+  width: 100% !important;
+}
+
+.nav-toggle{
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20;
+  line-height: 60px;
+  display: none;
+}
+
+/* Version Movil */
+#mobileMenu {
+  display: none;
+  justify-content: end;
+}
+
+@media (max-width: 991px) {
+  #mobileMenu {
+    display: block;
+    padding: 10px;
   }
-  
-  .navbar-collapse {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around !important;
+
+  #mobileNavbar {
+    margin-top: 10px;
   }
-  
-  .nav-izq {
-    display: flex;
-    justify-content: baseline;
-    justify-self: flex-start !important;
+
+  #mobileNavbar .nav-item {
+    margin-bottom: 10px;
   }
-  
-  .nav-link{
-    color: whitesmoke;
-  }
-  
-  .nav-der {
-    display: flex;
-    align-items: baseline;
-  }
-  
-  
-  #Nombrebarra {
-    color: rgb(129, 98, 61);
-    margin-left: 0%;
-  }
-  
-  #Pet {
-    color: #5B4C65 ;
-  
-  }
-  
-  .d-block{
-    height: auto !important;
-    width: 100% !important;
-  }
+}
 
 
   @media (max-width: 768px) {
@@ -76,8 +107,6 @@
       justify-self: end;
       margin-right: 0;
       order: 0;
-      width: 60px;
-      opacity: 0.5;
     }
   
     .navbar-toggler-icon{
@@ -103,7 +132,6 @@
       display: flex;
       align-items: center;
     }
-  
   }
   
   @media (max-width: 991.98px) {
@@ -182,6 +210,10 @@ button:hover{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+#open_cart_btn img{
+  width: 40px;
 }
 
 

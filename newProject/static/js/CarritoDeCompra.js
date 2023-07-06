@@ -73,12 +73,18 @@ const cart = document.getElementById('sidecart')
 const closeBtn = document.getElementById('close_btn')
 const backdrop = document.querySelector('.backdrop')
 const itemsEl = document.querySelector('.Productos')
+const cartItems = document.querySelector('.cart_items')
+const itemCount = document.getElementById('Item_Count')
+const SubtotalPrice = document.getElementById('subtotal_price')
+
+let cart_data = []
 
 openBtn.addEventListener('click', openCart)
 closeBtn.addEventListener('click', closeCart)
 backdrop.addEventListener('click', closeCart)
 
 renderItems()
+RenderCartItems()
 
 // Open Cart
 function openCart() {
@@ -100,16 +106,120 @@ function closeCart() {
     }, 500)
 }
 
+// Agregar productos al carrito
+function addItem(idx, ProductoId) {
+    // Encontrar mismos productos
+    const foundedItem = cart_data.find(
+        (producto) => producto.id.toString() === ProductoId.toString()
+    )
+
+    if (foundedItem) {
+        IncrementarCantidad(ProductoId)
+    } else {
+        cart_data.push(ITEMS[idx])
+    }
+    updateCart()
+    openCart()
+}
+
+
+// Remover productos del carrito
+function RemoveCartItem(ProductoId){
+    cart_data = cart_data.filter((producto) => producto.id != ProductoId)
+
+    updateCart()
+}
+
+// Incrementar cantidad de producto
+function IncrementarCantidad(ProductoId) {
+    cart_data = cart_data.map((producto) =>
+     producto.id.toString() === ProductoId.toString()
+     ? { ...producto, qty: producto.qty + 1}
+     : producto
+     )
+
+     updateCart()
+}
+
+// Disminuir cantidad de producto
+function DisminuirCantidad(ProductoId) {
+    cart_data = cart_data.map((producto) =>
+     producto.id.toString() === ProductoId.toString()
+     ? { ...producto, qty: producto.qty > 1 ? producto.qty - 1 : producto.qty}
+     : producto
+     )
+
+     updateCart()
+}
+
+// Contador de items 
+function ContadorItems(){
+    let ItemCount = 0
+
+    cart_data.forEach((producto) => (ItemCount += producto.qty))
+
+    itemCount.innerText = ItemCount
+}
+
+// Calculo Total Compra
+function CountSubtotalPrice(){
+    let subtotal = 0
+
+    cart_data.forEach((producto) => (subtotal += producto.price * producto.qty))
+
+    SubtotalPrice.innerText = subtotal
+}
+
 
 // Render Items
 function renderItems() {
-    ITEMS.forEach((producto) => {
+    ITEMS.forEach((producto, idx) => {
         const itemEl = document.createElement('div');
         itemEl.classList.add('producto');
+        itemEl.onclick = () => addItem(idx, producto.id)
         itemEl.innerHTML = `
-                <img src="{% static '${producto.image}' %}">
-                <button>Agregar al carrito</button>
-        `;
+            <img src="{% static '${producto.image}' %}">
+            <button>Agregar al carrito</button>
+        `
         itemsEl.appendChild(itemEl)
     })
+}
+
+// ${producto.image}
+// Render Cart Items
+function RenderCartItems() {
+    // Removemos todo del carrito
+    cartItems.innerHTML = ""
+    // Agregamos nuevo producto
+    cart_data.forEach((producto) => {
+        const cartItem = document.createElement('div')
+        cartItem.classList.add('cart_item')
+        cartItem.innerHTML = `
+        <div class="remove_item" onclick="RemoveCartItem(${producto.id})">
+        <span>&times;</span>
+      </div>
+      <div class="item_img">
+        <img src="${producto.image}">
+      </div>
+      <div class="item_details">
+        <p>${producto.name}</p>
+        <strong>$${producto.price}</strong>
+        <div class="qty">
+          <span onclick="DisminuirCantidad(${producto.id})">-</span>
+          <strong>${producto.qty}</strong>
+          <span onclick="IncrementarCantidad(${producto.id})">+</span>
+        </div>
+      </div>
+        `
+    cartItems.appendChild(cartItem)
+    })
+}
+
+function updateCart() {
+    // Renderizado de carrito con data actualizada
+    RenderCartItems()
+    // Contador total de items de carrito
+    ContadorItems()
+    // Calculo Precio Total
+    CountSubtotalPrice()
 }
