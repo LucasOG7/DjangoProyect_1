@@ -57,49 +57,84 @@
   <!-- Cuerpo de la web -->
   <div class="container-fluid">
     <div class="container">
-      <div class="row">
-        <div class="col-md-7 contenedor-datos shadow rounded p-5">
-          <div>
-            <h2 class="text-center mb-5 shadow-sm p-3" style="color: white;">Contáctanos</h2>
-          </div>
-          <div class="row">
-            <div class="col mb-3">
-              <label class="form-label" for="">Nombres</label>
-              <input type="text" class="form-control" placeholder="Lucas">
+      <form
+      method="POST"
+      action=""
+      id="formulario"
+      >
+      {% csrf_token %}
+        <div class="row">
+          <div class="col-md-7 contenedor-datos shadow rounded p-5">
+            <div>
+              <h2 class="text-center mb-5 shadow-sm p-3" style="color: white;">Contáctanos</h2>
             </div>
-            <div class="col mb-3">
-              <label class="form-label" for="">Apellidos</label>
-              <input type="text" class="form-control" placeholder="Riffo">
+            <div class="row">
+              <div class="col mb-3">
+                <label class="form-label" for="">Nombres</label>
+                <input type="text" 
+                id="nombrect"
+                class="form-control" 
+                placeholder="Nombres"
+                required
+                >
+              </div>
+              <div class="col mb-3">
+                <label class="form-label"  for="">Apellidos</label>
+                <input
+                type="text" 
+                class="form-control"
+                placeholder="Apellidos"
+                id="apellidosct"
+                required
+                >
+              </div>
             </div>
-          </div>
 
-          <div class="mb-3">
-            <label class="form-label" for="">Email</label>
-            <input type="Email" class="form-control" placeholder="LucasR@gmail.com" required>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label" for="">Asunto</label>
-            <input type="text" class="form-control" placeholder="Asunto">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label" for="">Mensaje</label>
-            <textarea class="form-control" placeholder="Déjanos tu opinión" rows="5"></textarea>
-          </div>
-
-          <div class="col-md-5">
-            <div class="ml-2">
-              <h1> Hagamos que tu peludo sea más Healthy</h1>
-              <br>
-              <p> Somos una organización sin fines de lucro que se forma con el objetivo de
-                mejorar la calidad de vida de las mascotas y animales en situacion de abandono y a la vez disminuir
-                la sobrepoblación a través de la educación, consientizacion sobre la temática de Tenencia Responsable en
-                nuestro país y la adopcion de animales en lugar de comprar uno.</p>
-              <br>
-              <a href="#" class="fas fa-phone" style="text-decoration:none"> Contacto: (+56)954234678</a>
+            <div class="mb-3">
+              <label class="form-label" for="">Email</label>
+              <input 
+              type="Email" 
+              id="Email" 
+              class="form-control" 
+              placeholder="Email@gmail.com" 
+              required>
             </div>
-          </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="">Asunto</label>
+              <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Asunto"
+              id="asunto" 
+              required
+> 
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="">Mensaje</label>
+              <textarea
+              type="text"
+              id="mensaje" 
+              class="form-control" 
+              placeholder="Déjanos tu opinión" 
+              rows="5"
+              required
+              ></textarea>
+            </div>
+
+            <div class="col-md-5">
+              <div class="ml-2">
+                <h1> Hagamos que tu peludo sea más Healthy</h1>
+                <br>
+                <p> Somos una organización sin fines de lucro que se forma con el objetivo de
+                  mejorar la calidad de vida de las mascotas y animales en situacion de abandono y a la vez disminuir
+                  la sobrepoblación a través de la educación, consientizacion sobre la temática de Tenencia Responsable en
+                  nuestro país y la adopcion de animales en lugar de comprar uno.</p>
+                <br>
+                <a href="#" class="fas fa-phone" style="text-decoration:none"> Contacto: (+56)954234678</a>
+              </div>
+            </div>
 
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">

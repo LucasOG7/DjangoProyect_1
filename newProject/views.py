@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Usuario, tipoUsuario, Cliente
+from .models import Usuario, tipoUsuario, Cliente, Contactos
 from .forms import UsuarioForm, tipoForm
 
 # Create your views here.
@@ -35,6 +35,7 @@ def Registro(request):
         comuna = request.POST["comunas"]
         direccion = request.POST["direccion"]
         contraseña = request.POST["password"]
+        confirmar_contraseña = request.POST["password2"]
     
     objCliente = Cliente.objects.create(
         correo = correo,
@@ -44,7 +45,9 @@ def Registro(request):
         comuna = comuna,
         direccion = direccion,
         contraseña = contraseña,
+        confirmar_contraseña = confirmar_contraseña,
     )
+    
     objCliente.save()
     print("Agregado con exito")
     print(objCliente)
@@ -68,6 +71,27 @@ def QuienesSomos(request):
 
 
 def Contactanos(request):
-    context = {}
-    return render(request, "pages/Contactanos.html", context)
+    if request.method != "POST":
+        contacto = Contactos.objects.all()
+        context = {"Contactos" : contacto}
+        return render(request, "pages/Contactanos.html", context)
+    else:
+        nombre = request.POST["nombrect"]
+        apellidos = request.POST["apellidosct"]
+        correo = request.POST["Email"]
+        asunto = request.POST["asunto"]
+        mensaje = request.POST["mensaje"]
+
+    objContactos = Contactos.objects.create(
+        nombre = nombre,
+        apellidos = apellidos,
+        correo = correo,
+        asunto = asunto,
+        mensaje = mensaje,
+    )
+    objContactos.save()
+    print("Agregado con exito")
+    print(objContactos)
+    context = {"mensaje": "OK Registrado Correctamente"}
+    return render(request, "pages/Pag_pcpal.html", context)
 

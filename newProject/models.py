@@ -37,6 +37,37 @@ class Cliente(models.Model):
     comuna = models.CharField(max_length=50, blank=False, null=False)
     direccion = models.CharField(max_length=50, blank=False, null=False)
     contraseña = models.CharField(max_length=50, blank=False, null=False)
+    confirmar_contraseña = models.CharField(max_length=50, blank=False, null=False)
 
     def __str__(self):
         return str(self.nombre) + " " + str(self.apellidos)
+    
+
+
+class Productos(models.Model):
+    codigo = models.BigAutoField(primary_key=True)
+    nombre = models.CharField(max_length=50,blank=False, null=False )
+    precio = models.IntegerField(blank=False, null=False)
+    categorias = [('alimentos','Alimento.'),
+                        ('accesorios','Accesorio.'),
+                        ('higiene_cuidado','Higiene y cuidado.'),
+                        ('camas_casas','Camas y casas.'),
+                        ('productos','Producto.')
+                        ]
+    categoria = models.CharField(max_length=25,default= 'producto', choices=categorias)
+    descripcion = models.TextField(blank=True, null = False)
+
+    def str(self):
+        return str(self.nombre)
+    
+    
+class Contactos(models.Model):
+    id_comentario = models.BigAutoField(primary_key=True)
+    nombres = models.CharField(max_length=50, blank=False, null=False)
+    apellidos = models.CharField(max_length=50, blank=False, null=False)
+    correo = models.EmailField(max_length=60, blank=False, null = False)
+    asunto = models.CharField(max_length=50, blank=False,null=False)
+    mensaje = models.TextField(blank=False,null=False)
+
+    def str(self):
+        return str(self.id_comentario)

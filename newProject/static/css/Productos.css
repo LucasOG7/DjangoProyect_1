@@ -1,4 +1,5 @@
 /* HEAD */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -59,89 +60,7 @@
 #mobileMenu {
   display: none;
   justify-content: end;
-}
-
-@media (max-width: 991px) {
-  #mobileMenu {
-    display: block;
-    padding: 10px;
-  }
-
-  #mobileNavbar {
-    margin-top: 10px;
-  }
-
-  #mobileNavbar .nav-item {
-    margin-bottom: 10px;
-  }
-}
-
-
-  @media (max-width: 768px) {
-  
-    .navbar {
-      display: flex;
-      gap: 2px;
-      align-items: center;
-    }
-  
-    .logo-head {
-      order: 0;
-    }
-  
-    .boton-barras {
-      display: flex;
-      background-color:black;
-      padding: 15px;
-      align-items: center;
-      justify-self: center;
-      order: 3;
-      }
-  
-      .nav-link{
-        display: block !important;
-      }
-  
-    .navbar-toggler {
-      display: flex;
-      justify-self: end;
-      margin-right: 0;
-      order: 0;
-    }
-  
-    .navbar-toggler-icon{
-      background-color: white;
-      color: white !important;
-    }
-  
-    .nav-izq{
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .nav-der{
-      display: flex;
-      justify-content: space-around;
-      background-color: #99ca9d;
-      margin-right: -50px;
-    }
-  
-    .inner1{
-      padding: 20px;
-      height: auto;
-      display: flex;
-      align-items: center;
-    }
-  }
-  
-  @media (max-width: 991.98px) {
-    .navbar {
-      display: flex;
-      justify-content: space-around;
-    }
-  
-  }
-
+} 
 
 
   /*BODY*/
@@ -271,6 +190,10 @@ button:hover{
   align-items: center;
 }
 
+.cart_header img{
+  width: 25px;
+}
+
 .cart_header .close_btn{
   color: black;
 }
@@ -340,7 +263,6 @@ button:hover{
 .remove_item span{
   color: white;
   font-size: 20px;
-  user-select: none;
   margin-bottom: 5px;
 }
 
@@ -637,4 +559,70 @@ input[type="radio"]{
   display: flex;
   justify-content: center;
   background-color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    order: 1;
+  }
+
+  .navbar-collapse {
+    order: 3;
+  }
+
+  .nav-link {
+    flex-direction: column !important;
+  }
+
+  .navbar-toggler {
+    order: 0;
+  }
+
+  .navbar-toggler-icon {
+    background-color: white;
+    color: white !important;
+  }
+
+  .nav-izq {
+    flex-direction: column;
+  }
+
+  .nav-der {
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #99ca9d;
+    margin-right: -50px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .col-4{
+    display: none;
+  }
+
+  #mobileMenu {
+    display: block;
+    padding: 10px;
+  }
+
+  #mobileNavbar {
+    margin-top: 10px;
+  }
+
+  #mobileNavbar .nav-item {
+    margin-bottom: 10px;
+  }
+  
 }

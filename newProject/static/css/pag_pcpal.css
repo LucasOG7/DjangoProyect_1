@@ -1,4 +1,5 @@
 /* HEAD */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -61,20 +62,6 @@
   justify-content: end;
 }
 
-@media (max-width: 991px) {
-  #mobileMenu {
-    display: block;
-    padding: 10px;
-  }
-
-  #mobileNavbar {
-    margin-top: 10px;
-  }
-
-  #mobileNavbar .nav-item {
-    margin-bottom: 10px;
-  }
-}
 
 /* BODY */
 .jumbotron{
@@ -282,6 +269,7 @@ body{
   background-color: white;
 }
 
+/* Responsive */
 
 @media (max-width: 768px) {
 
@@ -368,7 +356,8 @@ body{
 }
 
 
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
+  
   .navbar {
     display: flex;
     justify-content: space-around;
@@ -376,6 +365,19 @@ body{
 
   .col-4{
     display: none;
+  }
+
+  #mobileMenu {
+    display: block;
+    padding: 10px;
+  }
+
+  #mobileNavbar {
+    margin-top: 10px;
+  }
+
+  #mobileNavbar .nav-item {
+    margin-bottom: 10px;
   }
 
 }

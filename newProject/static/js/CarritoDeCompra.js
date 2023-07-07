@@ -1,25 +1,30 @@
+var img = document.createElement('img');
+img.src = 'img/Comida-perro.jfif'; // Ruta relativa o absoluta de la imagen
+document.body.appendChild(img);
+
+
 const ITEMS = [
-    // No me funciona la importacion de las imagenes :c
+    
     {
         id: 1,
         name: 'Comida para perros (Champion Dog)',
-        price: 8.990,
-        image: "{% static 'img/Comida-perro.jfif' %}",
+        price: 8990,
+        image: img,
         qty: 1,
     },
 
     {
         id: 2,
         name: 'Comida para gatos (Purina Cat Show)',
-        price: 8.990,
-        image: 'static/img/Comida-gato.jfif',
+        price: 8990,
+        image: 'newProject/static/img/Comida-gato.jfif',
         qty: 1,
     },
 
     {
         id: 3,
         name: 'Collar para perros',
-        price: 3.990,
+        price: 3990,
         image: 'static/img/Collar-Perrro.webp',
         qty: 1,
     },
@@ -27,7 +32,7 @@ const ITEMS = [
     {
         id: 4,
         name: 'Rascador para gatos',
-        price: 29.990,
+        price: 29990,
         image: "{% static 'img/Rascador-Gatos.webp'%}",
         qty: 1,
     },
@@ -35,7 +40,7 @@ const ITEMS = [
     {
         id: 5,
         name: 'Bandanas',
-        price: 1.990,
+        price: 1990,
         image: 'static/img/Bandanas.png',
         qty: 1,
     },
@@ -43,7 +48,7 @@ const ITEMS = [
     {
         id: 6,
         name: 'Identificador para perros',
-        price: 4.990,
+        price: 4990,
         image: 'static/img/IDENTIFICADOR-PERRO.jpg',
         qty: 1,
     },
@@ -51,8 +56,8 @@ const ITEMS = [
     {
         id: 7,
         name: 'Identificador para gatos',
-        price: 4.990,
-        image: 'static/img/IDENTIFICADOR-GATO.jpg',
+        price: 4990,
+        image: 'img/IDENTIFICADOR-GATO.jpg',
         qty: 1,
     },
 
